@@ -31,7 +31,7 @@ jobs:
       id: playwright-cache
       with:
         path: |
-          ~/Library/Caches/ms-playwright
+          ~/.cache/ms-playwright
         key: ${{ runner.os }}-${{ hashFiles('./node_modules/playwright/package.json') }}
 
     - name: Install playwright deps
