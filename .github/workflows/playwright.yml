@@ -35,7 +35,7 @@ jobs:
         key: ${{ runner.os }}-${{ hashFiles('**/node_modules/playwright/package.json') }}
 
     - name: Install playwright deps
-      run: npx playwright install --with-deps
+      run: npx playwright install-deps
 
     - name: Run Playwright tests
       run: npx playwright test
