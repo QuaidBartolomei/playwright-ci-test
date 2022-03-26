@@ -32,7 +32,7 @@ jobs:
       with:
         path: |
           ~/.cache/ms-playwright
-        key: ${{ runner.os }}-${{ hashFiles('./node_modules/playwright/package.json') }}
+        key: ${{ runner.os }}-${{ hashFiles('**/node_modules/playwright/package.json') }}
 
     - name: Install playwright deps
       if: steps.playwright-cache.outputs.cache-hit != 'true'
